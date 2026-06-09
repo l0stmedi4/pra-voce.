@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartão Animado</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+.star{
+    position:absolute;
+    font-size:20px;
+    animation:float 4s infinite ease-in-out;
+}
+
+.card{
+    width:300px;
+    height:180px;
+    background:#f8b6c7;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    transform:scale(0);
+    animation:appear 1s forwards;
+}
+
+.text{
+    opacity:0;
+    animation:showText 1s forwards 1s;
+}
+
+@keyframes appear{
+    to{ transform:scale(1); }
+}
+
+@keyframes showText{
+    to{ opacity:1; }
+}
+
+@keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-15px); }
+}
+</style>
+</head>
+<body>
+
+<div class="star" style="top:10%;left:20%;">⭐</div>
+<div class="star" style="top:20%;left:80%;">✨</div>
+<div class="star" style="top:70%;left:15%;">⭐</div>
+<div class="star" style="top:80%;left:75%;">✨</div>
+
+<div class="card">
+    <div class="text">
+        <h2>amor eu fiz esse site pra dizer que te amo muito,esse é mais um jeito de eu demonstrar meu amor, por voce.</h2>
+       receba isso com carinho, mesmo que seja simples.
+    </div>
+</div>
+
+</body>
+</html>
